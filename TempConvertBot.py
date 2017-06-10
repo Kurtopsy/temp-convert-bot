@@ -30,7 +30,7 @@ else:
     
 print("Obtaining 25 comments...")
 with open("posts_replied_to.txt", "a") as f:
-    for comment in reddit.subreddit('TempConvertBot').comments(limit=25):
+    for comment in reddit.subreddit('SUBREDDIT').comments(limit=25):
         if "!*" in comment.body:
             print('String with "!*" found in comment {}'.format(comment.id))
             tempType = comment.body[-1:]
