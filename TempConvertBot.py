@@ -28,7 +28,7 @@ else:
        posts_replied_to = posts_replied_to.split("\n")
        posts_replied_to = list(filter(None, posts_replied_to))
     
-print("Obtaining 25 comments...")
+
 with open("posts_replied_to.txt", "a") as f:
     for comment in reddit.subreddit('SUBREDDIT').comments(limit=25):
         if "!*" in comment.body:
